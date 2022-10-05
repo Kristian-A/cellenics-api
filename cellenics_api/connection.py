@@ -9,6 +9,7 @@ from cellenics_api.sample import Sample
 from cellenics_api.utils import load_json
 
 class Connection:
+
     def __init__(self, username, password):
         self.__cognito_config = load_json('cognito.config.json')
         self.__default_config = load_json('default.config.json')

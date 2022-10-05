@@ -5,8 +5,10 @@ This python package provides an easy way to create projects and upload samples i
 
 ### Installation
 To install the package execute the following line:
-`pip install cellenics_api`
- 
+```bash
+pip install --upgrade pip
+pip install cellenics_api`
+``` 
 ### Usage
 In order to use the package you first need to create an account in Cellenics (https://scp.biomage.net/) if you don't have one yet.
 
