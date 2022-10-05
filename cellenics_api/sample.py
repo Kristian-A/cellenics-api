@@ -2,6 +2,7 @@ import uuid
 from os import listdir
 from os.path import isfile, join
 from cellenics_api.sample_file import SampleFile
+from cellenics_api.utils import is_file_hidden
 
 class Sample:
 
@@ -38,7 +39,10 @@ class Sample:
         for file_path in file_paths:
             full_path = join(path, file_path)
 
-            if isfile(full_path):
+            if is_file_hidden(full_path):
+                continue    
+
+            if isfile(full_path):      
                 file = SampleFile(full_path)
                 folder_name = file.folder()
     
